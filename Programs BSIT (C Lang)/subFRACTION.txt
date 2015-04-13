@@ -1,0 +1,71 @@
+#include<stdio.h>
+main()
+{
+    int a,b,c,d;
+    subFraction(a,c,b,d);
+
+}
+int subFraction(int a,int c, int b, int d)
+{
+    printf("ENTER THE VALUE OF X1 AND Y1 (X1/Y1):") ;
+    scanf("%d%d",&a,&c);
+    printf("ENTER THE VALUE OF X2 AND Y2 (X2/Y2):");
+    scanf("%d%d",&b,&d);
+
+    int x3,y3,div,i,gcd=1;
+    x3=(a*d)-(b*c);
+    y3=(c*d);
+    if (x3>y3)
+    {
+        div=y3;
+    }
+    else
+    {
+        div=x3;
+    }
+    for(i=div;i>0;i--)
+    {
+        if(x3%i==0 && y3%i==0)
+        {
+            x3=x3/i;
+            y3=y3/i;
+        }
+    }
+
+
+    if(x3==0)
+    {
+        gcd=0;
+        printf("FRACTION IS 0\n");
+    }
+    if(y3==0)
+    {
+        gcd=0;
+        printf("FRACTION IS UNDEFINED\n");
+    }
+
+    if(x3>0 && y3>0)
+    {
+    if(x3>y3)
+    {
+        gcd=x3;
+    }
+    else
+    {
+        gcd=y3;
+    }
+
+
+    while(gcd>1)
+    {
+        if(x3%gcd==0 && y3%gcd==0)
+            break;
+        gcd--;
+
+    }
+
+    printf("DIFFERENCE: %d/%d\n",x3/gcd,y3/gcd);
+    printf("%d/%d-%d/%d=%d/%d",a,c,b,d,x3/gcd,y3/gcd);
+    }
+
+}

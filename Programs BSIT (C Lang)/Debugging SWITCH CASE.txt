@@ -1,0 +1,21 @@
+***If you want use "scanf", (Pressing ENTER after inputing)		
+
+
+char n=0; <-------(FOR USING CHAR)
+int n=1; <------ (FOR USING INT)
+ 
+
+***If you want to use "Getch", (W/o Pressing ENTER after inputing [automatic])
+
+
+
+int b;
+
+int b;
+
+printf("BLAH BLAH BLAH");
+
+b=getch();
+
+switch(b)
+   

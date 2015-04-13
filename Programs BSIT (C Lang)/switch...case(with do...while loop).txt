@@ -1,0 +1,103 @@
+#include <stdio.h>
+main()
+{
+    int input, n1, n2, sum, diff, prod, quo, sum1, diff1, prod1, quo1, a, b, n, cu, sq, pre, mid, fin, ave, sno, usold, c, d;
+    char sname[50];
+    float uprice, total;
+
+    do
+    {
+        printf("\n\n\nThese are the list of the programs:\n");
+        printf("1. A program that displays 'Hello World'\n");
+        printf("2. A program that initializes, n1=10 and n2=10 then computes for the sum, difference, product, and quotient\n");
+        printf("3. A revision of program no.2 that asks the user to input for the value of n1 and n2\n");
+        printf("4. A program that will compute for the square and cube of a number\n");
+        printf("5. A program that will input for the prelim, midterm and final grades. Compute and display the average\n");
+        printf("6. A program that will input for the following:\n   1. salesman no.\n   2. salesman name\n  3. unit sold\n  4. unit price\n     Compute and display the total sales\n");
+        printf("7. A program that will swap the values of two variables\n");
+        printf("Type the number of the program you wanna try:\n");
+        scanf("%d",&input);
+
+        switch(input)
+        {
+        case 1:
+            printf ("\n\n\nHello World");
+            break;
+        case 2:
+            printf("\n\n\nn1=10, n2=10\n");
+            n1 = 10;
+            n2 = 10;
+            sum = n1 + n2;
+            diff = n1 - n2;
+            prod = n1 * n2;
+            quo = n1 / n2;
+            printf("The numbers are %d and %d \n", n1, n2);
+            printf("The sum of %d and %d is %d \n", n1, n2, sum);
+            printf("The difference of %d and %d is %d \n", n1, n2, diff);
+            printf("The product of %d and %d is %d \n", n1, n2, prod);
+            printf("The quotient of %d and %d is %d \n", n1, n2, quo);
+            break;
+        case 3:
+            printf("\n\n\nEnter a number:\n", a);
+            scanf("%d", &a);
+            printf("Enter another number:\n", b);
+            scanf("%d", &b);
+            sum1 = a + b;
+            diff1 = a - b;
+            prod1 = a * b;
+            quo1 = a / b;
+            printf("The sum of the numbers is %d \n", sum1);
+            printf("The difference of the numbers is %d \n", diff1);
+            printf("The product of the numbers is %d \n", prod1);
+            printf("The quotient of the numbers is %d \n", quo1);
+            break;
+        case 4:
+            printf("\n\n\nEnter a number:\n", n);
+            scanf("%d", &n);
+            sq = n * n;
+            cu = n * n * n;
+            printf("The square of %d is %d\n", n, sq);
+            printf("The cube of %d is %d\n", n, cu);
+            break;
+        case 5:
+            printf("\n\n\nPrelims:\n", pre);
+            scanf("%d", &pre);
+            printf("Midterms:\n", mid);
+            scanf("%d", &mid);
+            printf("Finals:\n", fin);
+            scanf("%d", &fin);
+            ave = (pre + mid + fin)/3;
+            printf("Average:\n");
+            printf("%d", ave);
+            break;
+        case 6:
+            printf("\n\n\nSalesman No.: ", sno);
+            scanf("%d", &sno);
+            printf("Salesman Name: ", sname);
+            scanf("%s", &sname);
+            printf("Units Sold: ", usold);
+            scanf("%d", &usold);
+            printf("Unit Price: ", uprice);
+            scanf("%f", &uprice);
+            total = usold * uprice;
+            printf("Total Sales: ");
+            printf("%.2f", total);
+            break;
+        case 7:
+            printf("\n\n\nEnter two numbers:\n");
+            printf("a: ");
+            scanf("%d", &c);
+            printf("b: ");
+            scanf("%d", &d);
+            c =  (  d = ( c = c + d , c - d ) , c - d );
+            printf("Swapping the values, we have:\n");
+            printf("a= %d\n", c);
+            printf("b= %d\n", d);
+            break;
+        default:
+            printf("Wrong Input!");
+            break;
+        }
+    }
+    while(input < 8);
+}
